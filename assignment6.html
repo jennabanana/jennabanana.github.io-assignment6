@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <title>13_4_comic_player</title>
+
+    <style>
+        #cover{
+            width:100vw;
+            height: 100vh;
+            background-image: url(https://res.cloudinary.com/dekkmrdck/image/upload/v1640528805/ass6/1992.11.046.01.cut_wdkxhi.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+
+        #heading{
+            color: white;
+            text-align: center;
+            padding-top: 50vh;
+            font-weight:bold;
+            font-size: 70px;
+        }
+
+        #intro{
+            width:100vw;
+            height: 100vh;
+        
+        }
+
+        #introword{
+            font-size: 3vh;
+    letter-spacing: 0.2vh;
+    line-height: 4vh;
+    width: 50vw;
+    color: white;
+    border-left: 0.5vh solid white;
+    padding: 20vh 0vh 5vh 5vh;
+        }
+
+        #intro1{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #outer{
+            width:100vw;
+            height: 10000px;
+            background-attachment: fixed;
+            background-image: url(https://res.cloudinary.com/dekkmrdck/image/upload/v1640529895/ass6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%B0%A1%E5%A0%B1_2_hhd6yt.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+
+       #curtain{
+        width:100vw;
+            height: 200vh; 
+            background-image: url(https://res.cloudinary.com/dekkmrdck/image/upload/v1640529895/ass6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%B0%A1%E5%A0%B1_1_czikbl.png);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;  
+            filter: grayscale(30%); 
+        }
+#curtainword{
+    color: white;
+    z-index: 10;
+    font-size: 6vh;
+    letter-spacing: 0.2vh;
+    text-align: center;
+            padding-top: 50vh;
+            font-weight:bold;
+}
+
+        #curtain2{
+        width:100vw;
+            height: 50vh; 
+            background-image: url(https://res.cloudinary.com/dekkmrdck/image/upload/v1640529895/ass6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%B0%A1%E5%A0%B1_2_hhd6yt.png);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;     
+            filter: grayscale(70%); 
+        }
+
+        #curtain2_1{
+        width:100vw;
+            height: 50vh; 
+            background-image: url(https://res.cloudinary.com/dekkmrdck/image/upload/v1640529895/ass6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%B0%A1%E5%A0%B1_2_hhd6yt.png);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;     
+            filter: grayscale(40%); 
+        }
+
+        #curtain2_2{
+        width:100vw;
+            height: 50vh; 
+            background-attachment: fixed;
+            background-image: url(https://res.cloudinary.com/dekkmrdck/image/upload/v1640529895/ass6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%B0%A1%E5%A0%B1_2_hhd6yt.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;     
+            filter: grayscale(10%); 
+        }
+
+        #curtain3{
+        width:100vw;
+            height: 100vh; 
+            background-image: url(https://res.cloudinary.com/dekkmrdck/image/upload/v1640529895/ass6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%B0%A1%E5%A0%B1_2_hhd6yt.png);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;    
+            
+           
+        }
+
+
+        .slideanimate {
+            visibility: hidden;
+        }
+
+        .slide {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cover">
+    <h1 id="heading">掌中絲線，戲偶人生</h1>
+    </div>
+
+    <div id="intro" class="container-fluid">
+        <div  class="row">
+        <div class="col-6" style="height: 100vh;">
+            <p id="introword" style="color:black">
+                你聽過布袋戲、歌仔戲，<br>
+但是你知道台灣也有絲線操縱的傀儡戲，<br>
+而且南北大不同嗎？<br>
+<br>
+北傀儡戲多用於消災除煞，<br>
+例如車禍、上吊、跳水、火災、新居落成，<br>
+因此開演時民眾不僅不聚集觀看，<br>
+反而紛紛走避，以免被煞沖到；<br>
+<br>
+南魁儡則常見在喜慶場合，<br>
+例如嬰兒滿月或祝壽時祈福謝神。
+            </p>
+        </div>
+            <div id="intro1" class="col-6" style="background-image:url(https://res.cloudinary.com/dekkmrdck/image/upload/v1640587767/ass6/1992.11.038.01.cut_zypeqs.jpg);z-index: 5;">
+            </div>
+        </div>
+
+<p>
+
+</p>
+    </div>
+
+    <div id="curtain">
+        <p id="curtainword" style="z-index: 5;">事實上，世界上還有好多地方也有傀儡戲，<br>
+            構造、裝飾、意義、功能各都大有學問。<br>
+            一起來看看吧！</p>
+    </div>
+    <div id="curtain2"> </div>
+    <div id="curtain2_1"> </div>
+     <div id="curtain2_2"></div>
+    <div id="curtain3"></div>
+
+    <div id="outer">
+       
+        <img src="https://res.cloudinary.com/dekkmrdck/image/upload/v1640656755/ass6/%E5%9C%96%E7%89%87_1_aimq4l.png" class="img-fluid slideanimate" data-pos = 4000 data-direction="fadeInDown" style="position:fixed;left:-100px;top:0px;width:100vw;">
+        <img src="https://res.cloudinary.com/dekkmrdck/image/upload/v1640656753/ass6/%E5%9C%96%E7%89%87_2_xhajlo.png" class="img-fluid slideanimate" data-pos = 5000 data-direction="fadeInRight" style="position:fixed;left:-100px;top:0px;width:100vw;">
+        <img src="https://res.cloudinary.com/dekkmrdck/image/upload/v1640656752/ass6/%E5%9C%96%E7%89%87_3_fpfkbk.png" class="img-fluid slideanimate" data-pos = 6000 data-direction="fadeInUp" style="position:fixed;left:-100px;top:0px;width:100vw;">
+        <img src="https://res.cloudinary.com/dekkmrdck/image/upload/v1640656755/ass6/%E5%9C%96%E7%89%87_4_quyjqx.png" class="img-fluid slideanimate" data-pos = 7000 data-direction="fadeInDown" style="position:fixed;left:-100px;top:0px;width:100vw;">
+        <img src="https://res.cloudinary.com/dekkmrdck/image/upload/v1640529895/ass6/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%B0%A1%E5%A0%B1_1_czikbl.png" class="img-fluid slideanimate" data-pos = 9000 data-direction="fadeInLeft" style="position:fixed;left:0px;top:0px;width:100vw;">
+        <img src="https://res.cloudinary.com/dekkmrdck/image/upload/v1640656750/ass6/%E5%9C%96%E7%89%87_6_jzqgba.png" class="img-fluid slideanimate" data-pos = 10000 data-direction="fadeInLeft" style="position:fixed;left:0px;top:0px;width:100vw;">
+   
+<!--        <div style="position:absolute;background-color:rgba(0,0,0,0.5);width:50vw;min-height:500px"></div>-->
+    </div>
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            var winh = $(window).height();
+            $(window).scroll(function() {
+                var scrolled = $(window).scrollTop();
+                $(".slideanimate").each(function() {
+                    if (scrolled > $(this).data("pos")) {
+                        $(this).addClass("animated slide " + $(this).data("direction"));
+                    }
+                    if (scrolled == 0) {
+                        $(this).removeClass("animated slide " + $(this).data("direction"));
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
